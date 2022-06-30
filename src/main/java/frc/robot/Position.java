@@ -10,23 +10,22 @@ public class Position {
     int currentAngle;
 
     public void driveUp() throws InterruptedException {
-      // if currentAngle = 0 then driveDistance(10) then verticalPosition += 10 else turnDegrees(90) and currentAngle + 90  if currentAngle = 0 then driveDistance(10) then verticalPosition += 10 else turnDegrees(90) and currentAngle + 90 if currentAngle = 0 then driveDistance(10) then verticalPosition += 10 else turnDegrees(90) and currentAngle + 90;
-        verticalPosition += 10;
+      if currentAngle = 0 then driveDistance(10) then verticalPosition += 10 else turnDegrees(0 + currentAngle) currentAngle = 0;
+        
     }
 
     public void driveDown() throws InterruptedException {
+      if currentAngle = 180 then driveDistance(10) then verticalPosition -= 10 else turnDegrees(0 + currentAngle) currentAngle = 180;
       
-      verticalPosition -= 10;
     }
 
     public void driveRight() throws InterruptedException {
+      if currentAngle = 90 then driveDistance(10) then horizontalPosition += 10 else turnDegrees(0 + currentAngle) currentAngle = 90;
       
-      horizontalPosition += 10;
     }
 
     public void driveLeft() throws InterruptedException {
-      turnDegrees(-90);
-      horizontalPosition -= 10;
+      if currentAngle = -90 then driveDistance(10) then horizontalPosition -= 10 else turnDegrees(0 + currentAngle) currentAngle = -90;
     }
 
     public void returnToHome() {
