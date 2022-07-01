@@ -7,25 +7,46 @@ public class Position {
     
     int verticalPosition;
     int horizontalPosition;
-    int currentAngle;
+    int beeschurger;
 
     public void driveUp() throws InterruptedException {
-      if currentAngle = 0 then driveDistance(10) then verticalPosition += 10 else turnDegrees(0 + currentAngle) currentAngle = 0;
-        
+      if (beeschurger == 0) {
+        driveDistance(10);  
+        verticalPosition += 10;
+      }
+      else {
+        turnDegrees(0 - beeschurger);
+      }
     }
 
     public void driveDown() throws InterruptedException {
-      if currentAngle = 180 then driveDistance(10) then verticalPosition -= 10 else turnDegrees(0 + currentAngle) currentAngle = 180;
-      
+      if (beeschurger == 180) {
+        driveDistance(10);  
+        verticalPosition -= 10;
+      }
+      else{ 
+        turnDegrees(180 - beeschurger);
+      }
     }
 
     public void driveRight() throws InterruptedException {
-      if currentAngle = 90 then driveDistance(10) then horizontalPosition += 10 else turnDegrees(0 + currentAngle) currentAngle = 90;
-      
+      if (beeschurger == 90) {
+        driveDistance(10);  
+        horizontalPosition += 10;
+      }
+      else{
+        turnDegrees(90 - beeschurger);
+      }
     }
 
     public void driveLeft() throws InterruptedException {
-      if currentAngle = -90 then driveDistance(10) then horizontalPosition -= 10 else turnDegrees(0 + currentAngle) currentAngle = -90;
+      if (beeschurger == -90) {
+        driveDistance(10); 
+        horizontalPosition -= 10;
+      }
+      else{
+        turnDegrees(-90 - beeschurger);
+      }
     }
 
     public void returnToHome() {
